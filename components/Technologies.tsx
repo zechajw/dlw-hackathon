@@ -107,7 +107,7 @@ const Technologies: FC = () => {
         <br />
         <a
           className="text-blue-400 underline"
-          href="https://github.com/amoscookeh/tensormodel"
+          href="https://github.com/jessraphael/tensormodel"
           target="_blank"
           rel="noreferrer"
         >
