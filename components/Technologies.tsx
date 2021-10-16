@@ -37,6 +37,12 @@ const Technologies: FC = () => {
         . When users upload their chat history, they receive their predictions
         using FastAPI which provides a Rest API to link the frontend to the
         model.
+        <p className="mt-4 text-xl paragraph">
+          (Unfortunately, due to the size of the model, we were unable to host
+          the Pytorch model onto the cloud. The code is still in the GitHub
+          repository, though the frontend is currently rendering randomly
+          generated data into the charts and dashboard)
+        </p>
       </p>
       <div className="flex w-full">
         <div className="px-6 pt-4 mx-auto mt-8 bg-white rounded-lg bg-opacity-90">

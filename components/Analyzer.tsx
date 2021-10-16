@@ -24,7 +24,7 @@ const Analyzer: FC = () => {
     await sleep(500);
     const dummyName1: any = prompt("Please enter the first person's name");
     const dummyName2: any = prompt("Please enter the second person's name");
-    await sleep(3000);
+    await sleep(1500);
     try {
       const days: number = Math.floor(Math.random() * 5) + 3;
       const randomNumbers: number[] = [];
@@ -104,6 +104,12 @@ const Analyzer: FC = () => {
                   Upload Chat
                 </Button>
               </Fade>
+              <p className="text-center mt-8 text-xl paragraph">
+                (Unfortunately, due to the size of the model, we were unable to
+                host the Pytorch model onto the cloud. The code is still in the
+                GitHub repository, though the frontend is currently rendering
+                randomly generated data into the charts and dashboard)
+              </p>
             </div>
           </div>
         )}
