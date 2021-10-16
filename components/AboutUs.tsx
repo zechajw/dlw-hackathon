@@ -47,10 +47,20 @@ const AboutUs: FC = () => {
           sentiment analysis with machine learning, our solution can:{" "}
         </p>
         <Fade direction="up">
-          <p className="mt-8 font-bold text-center paragraph">
-            Convert your chat history into visualizable data that tells you how
-            much they actually like you.
-          </p>
+          <div className="flex flex-col items-center">
+            <p className="my-8 font-bold text-center paragraph">
+              Convert your chat history into visualizable data that tells you
+              how much they actually like you.
+            </p>
+            <Image
+              src="/images/chart.png"
+              alt="Texting"
+              height={250}
+              width={617}
+              className="rounded-2xl"
+              layout="fixed"
+            />
+          </div>
         </Fade>
       </div>
     </>
