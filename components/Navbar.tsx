@@ -34,6 +34,7 @@ const Navbar: FC = () => {
       <div className="flex flex-grow max-w-3xl justify-evenly">
         <NavItem title={"Home"} href={"#home"} />
         <NavItem title={"About Us"} href={"#about-us"} />
+        <NavItem title={"Guide"} href="#guide" />
         <NavItem title={"Analyzer"} href={"#analyzer"} />
         <NavItem title={"Technologies"} href={"#how"} />
         <NavItem title={"Contact Us"} href={"#contact-us"} />

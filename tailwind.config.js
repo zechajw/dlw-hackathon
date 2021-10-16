@@ -1,3 +1,5 @@
+const { classicNameResolver } = require("typescript");
+
 /* eslint-disable no-unused-vars */
 module.exports = {
   mode: "jit",
@@ -5,6 +7,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        almost: "calc(100vh - 8rem)",
+      },
       fontFamily: {
         lato: "'Lato', 'sans-serif'",
       },
