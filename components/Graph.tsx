@@ -6,9 +6,10 @@ import NameResults from "./NameResults";
 
 type Props = {
   fullData: FullData;
+  statistics: number[][];
 };
 
-const Graph: FC<Props> = ({ fullData }) => {
+const Graph: FC<Props> = ({ fullData, statistics }) => {
   const { name1, name2 } = fullData;
 
   return (
@@ -40,19 +41,19 @@ const Graph: FC<Props> = ({ fullData }) => {
                 <StatisticCard
                   style="name1"
                   title="Messages sent"
-                  value={847}
+                  value={statistics[0][0]}
                   unit=""
                 />
                 <StatisticCard
                   style="name1"
                   title="Avg. response time"
-                  value={1283}
-                  unit="s"
+                  value={statistics[0][1]}
+                  unit="min"
                 />
                 <StatisticCard
                   style="name1"
                   title="Avg. interest score"
-                  value={3.3}
+                  value={statistics[0][2]}
                   unit="/5"
                 />
               </div>
@@ -65,19 +66,19 @@ const Graph: FC<Props> = ({ fullData }) => {
                 <StatisticCard
                   style="name2"
                   title="Messages sent"
-                  value={437}
+                  value={statistics[1][0]}
                   unit=""
                 />
                 <StatisticCard
                   style="name2"
                   title="Avg. response time"
-                  value={2803}
-                  unit="s"
+                  value={statistics[1][1]}
+                  unit="min"
                 />
                 <StatisticCard
                   style="name2"
                   title="Avg. interest score"
-                  value={2.4}
+                  value={statistics[1][2]}
                   unit="/5"
                 />
               </div>
@@ -85,9 +86,9 @@ const Graph: FC<Props> = ({ fullData }) => {
           </div>
         </div>
         <div className="px-6 py-4 mt-4 ml-8 bg-ai-800 bg-opacity-30 w-max rounded-xl">
-          <NameResults name={name1} nameNumber={1} score={3.4} />
+          <NameResults name={name1} nameNumber={1} score={statistics[0][2]} />
           <div className="mt-6 text-3xl font-bold text-white">
-            <NameResults name={name2} nameNumber={2} score={1.4} />
+            <NameResults name={name2} nameNumber={2} score={statistics[1][2]} />
           </div>
         </div>
       </div>

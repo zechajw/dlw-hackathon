@@ -7,6 +7,7 @@ import Graph from "./Graph";
 const Analyzer: FC = () => {
   const [loading, setLoading] = useState(false);
   const [fullData, setFullData] = useState<FullData>();
+  const [statistics, setStatistics] = useState<number[][]>([[]]);
 
   const fetchResults = async (): Promise<void> => {
     function sleep(ms: number): Promise<void> {
@@ -62,6 +63,32 @@ const Analyzer: FC = () => {
         });
       });
       setFullData({ name1: name1, name2: name2, store: store });
+      const name1Sent = Math.floor(Math.random() * 800);
+      const name2Sent = Math.floor(Math.random() * 800);
+
+      const name1ResponseTime = Math.floor(Math.random() * 60);
+      const name2ResponseTime = Math.floor(Math.random() * 60);
+
+      const name1Average = Number(
+        (
+          randomNumbers
+            .filter((num, idx) => idx % 2 === 0)
+            .reduce((a, b) => a + b) /
+          (randomNumbers.length / 2)
+        ).toFixed(1)
+      );
+      const name2Average = Number(
+        (
+          randomNumbers
+            .filter((num, idx) => idx % 2 !== 0)
+            .reduce((a, b) => a + b) /
+          (randomNumbers.length / 2)
+        ).toFixed(1)
+      );
+      setStatistics([
+        [name1Sent, name1ResponseTime, name1Average],
+        [name2Sent, name2ResponseTime, name2Average],
+      ]);
     } catch (err: unknown) {
       console.error(err);
     }
@@ -87,7 +114,9 @@ const Analyzer: FC = () => {
           </div>
         )}
         {loading && <LoadingSpinner />}
-        {!loading && fullData && <Graph fullData={fullData} />}
+        {!loading && fullData && (
+          <Graph fullData={fullData} statistics={statistics} />
+        )}
       </div>
     </>
   );
