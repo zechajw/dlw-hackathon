@@ -6,11 +6,14 @@ import Button from "./Button";
 
 const Navbar: FC = () => {
   return (
-    <div className="fixed flex flex-row items-center w-full h-auto py-6 pr-8 bg-transparent">
+    <div className="fixed flex flex-row items-center w-full h-auto px-8 py-6 bg-transparent">
       <div>
-        <h1 className="pl-10 text-white bg-red-500 text-7xl hover:text-transparent bg-clip-text">
+        <a
+          className="text-4xl font-black text-white cursor-pointer bg-ai hover:text-transparent bg-clip-text"
+          href="#home"
+        >
           ÀI
-        </h1>
+        </a>
       </div>
       <div className="flex flex-grow max-w-2xl justify-evenly">
         <NavItem title={"Home"} link={"/"} />

@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const LandingPage: FC = () => {
   return (
-    <div>
+    <div id="home">
       <div className="flex flex-col items-center justify-center w-full h-screen bg-landing">
         <div className="flex items-center">
           <h1 className="font-black text-white select-none text-[12rem] text-gradient">
