@@ -15,42 +15,28 @@ const Analyzer: FC = () => {
     }
 
     setLoading(true);
-    await sleep(3500);
+    await sleep(500);
+    const dummyName1 = prompt("Please enter the first person's name");
+    const dummyName2 = prompt("Please enter the second person's name");
+    await sleep(3000);
     try {
+      const days: number = Math.floor(Math.random() * 5) + 3;
       const randomNumbers: number[] = [];
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0; i < days * 2; i++) {
         randomNumbers.push(Number((Math.random() * 4 + 1).toFixed(2)));
       }
-      const dummyData: Data[] = [
-        {
-          date: "2021-10-11",
-          value: { Jess: randomNumbers[0], Amos: randomNumbers[1] },
-        },
-
-        {
-          date: "2021-10-12",
-          value: { Jess: randomNumbers[2], Amos: randomNumbers[3] },
-        },
-
-        {
-          date: "2021-10-13",
-          value: { Jess: randomNumbers[4], Amos: randomNumbers[5] },
-        },
-
-        {
-          date: "2021-10-14",
-          value: { Jess: randomNumbers[6], Amos: randomNumbers[7] },
-        },
-
-        {
-          date: "2021-10-15",
-          value: { Jess: randomNumbers[8], Amos: randomNumbers[9] },
-        },
-        {
-          date: "2021-10-16",
-          value: { Jess: randomNumbers[10], Amos: randomNumbers[11] },
-        },
-      ];
+      const dummyData: Data[] = [];
+      for (let i = days; i > 0; i--) {
+        const newDataPoint: Data = { date: "", value: {} };
+        const datePoint = new Date();
+        datePoint.setDate(datePoint.getDate() - i);
+        newDataPoint.date = datePoint.toISOString().slice(0, 10);
+        newDataPoint.value = {
+          [dummyName1]: randomNumbers[2 * (days - i)],
+          [dummyName2]: randomNumbers[2 * (days - i) + 1],
+        };
+        dummyData.push(newDataPoint);
+      }
       const names = Object.keys(dummyData[0].value);
       const name1 = names[0];
       const name2 = names[1];
