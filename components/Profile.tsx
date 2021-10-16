@@ -22,6 +22,7 @@ const Profile: FC<Props> = ({ src, name, link }) => {
         alt="profile image"
         height={300}
         width={300}
+        layout="fixed"
       />
       <span className="mx-auto mt-5 text-2xl text-white">{name}</span>
       <div className="flex flex-grow mt-3">
