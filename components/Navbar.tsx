@@ -22,7 +22,7 @@ const Navbar: FC = () => {
 
   return (
     <div
-      className={`fixed flex flex-row items-center w-full h-auto px-8 py-6 ${
+      className={`fixed z-40 flex flex-row items-center w-full h-auto px-8 py-6 ${
         blackBG ? "bg-svg" : "bg-transparent"
       }`}
     >

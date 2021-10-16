@@ -25,7 +25,7 @@ const LandingPage: FC = () => {
           } transition-all duration-300`}
         >
           <motion.h1
-            className="font-black text-white select-none text-[12rem] text-gradient"
+            className="font-black text-white select-none text-[12rem] text-gradient hover:text-ai"
             initial={{ x: "-50%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
@@ -43,7 +43,10 @@ const LandingPage: FC = () => {
             transition={{ delay: 1.2, duration: 0.5 }}
           >
             Who says true love is hard to find?
-            <br /> Not with us by your side
+            <br /> Not with <span className="font-black hover:text-ai">
+              ÀI
+            </span>{" "}
+            by your side
           </motion.p>
         </div>
 

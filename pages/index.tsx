@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Loading from "../components/Loading";
+import MobileHide from "../components/MobileHide";
 import Body from "../components/Body";
 import LandingPage from "../components/LandingPage";
 import Border from "../components/Border";
@@ -11,14 +12,16 @@ const Home: NextPage = () => {
   return (
     <>
       <Loading />
-      <Body>
-        <Navbar />
-        <LandingPage />
-        <Border>
-          <AboutUs />
-          <Analyzer />
-        </Border>
-      </Body>
+      <MobileHide>
+        <Body>
+          <Navbar />
+          <LandingPage />
+          <Border>
+            <AboutUs />
+            <Analyzer />
+          </Border>
+        </Body>
+      </MobileHide>
     </>
   );
 };
