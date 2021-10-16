@@ -16,10 +16,10 @@ const Navbar: FC = () => {
         </a>
       </div>
       <div className="flex flex-grow max-w-2xl justify-evenly">
-        <NavItem title={"Home"} link={"/"} />
-        <NavItem title={"About Us"} link={"/about-us"} />
-        <NavItem title={"How"} link={"how"} />
-        <NavItem title={"Contact Us"} link={"contact-us"} />
+        <NavItem title={"Home"} href={"#home"} />
+        <NavItem title={"About Us"} href={"#about-us"} />
+        <NavItem title={"How"} href={"#how"} />
+        <NavItem title={"Contact Us"} href={"#contact-us"} />
       </div>
       <div className="ml-auto">
         <Button className="px-6 py-2">Try it now</Button>

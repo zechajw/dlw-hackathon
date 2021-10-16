@@ -1,11 +1,9 @@
 import { FC } from "react";
 
-type Props = {};
-
-const AboutUs: FC<Props> = () => {
+const AboutUs: FC = () => {
   return (
     <>
-      <div className="h-screen mt-28">
+      <div className="h-screen mt-28" id="about-us">
         <h1 className="heading">About us</h1>
         <p className="mt-16 paragraph">
           Here at ÀI, we understand the struggles that many singles face. Some
