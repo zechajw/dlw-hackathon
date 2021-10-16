@@ -71,7 +71,7 @@ const Technologies: FC = () => {
       <h2 className="mt-16 subheading">
         Front End Technologies and Data Visualization
       </h2>
-      <p className="mt-8 paragraph">
+      <p className="mt-8 text-white paragraph">
         We utilized <span className="font-bold text-ai-300">Next.js</span>,{" "}
         <span className="font-bold text-ai-300">TypeScript</span> and{" "}
         <span className="font-bold text-ai-300">Tailwind CSS</span> for the
