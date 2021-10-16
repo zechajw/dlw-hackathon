@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
+import Button from "./Button";
 
 const Analyzer: FC = () => {
   return (
@@ -67,6 +68,16 @@ const Analyzer: FC = () => {
           <h3 className="mb-4 text-left">Click the 'Export' button</h3>
         </li>
       </ol>
+      <div id="try-now" className="h-screen grid place-items-center">
+        <div>
+          <h1 className="text-5xl font-bold text-center text-white">
+            You're all set to demystify attraction!
+          </h1>
+          <Button className="font-bold uppercase px-10 py-4 mt-10 w-max text-center mx-auto text-4xl">
+            Upload Chat
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
