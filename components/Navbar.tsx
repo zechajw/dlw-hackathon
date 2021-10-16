@@ -27,21 +27,19 @@ const Navbar: FC = () => {
       }`}
     >
       <div>
-        <a
-          className="text-4xl font-black text-white cursor-pointer bg-ai hover:text-transparent bg-clip-text"
-          href="#home"
-        >
+        <div className="text-4xl font-black text-white select-none bg-ai hover:text-transparent bg-clip-text">
           ÀI
-        </a>
+        </div>
       </div>
-      <div className="flex flex-grow max-w-2xl justify-evenly">
+      <div className="flex flex-grow max-w-3xl justify-evenly">
         <NavItem title={"Home"} href={"#home"} />
         <NavItem title={"About Us"} href={"#about-us"} />
-        <NavItem title={"How"} href={"#how"} />
+        <NavItem title={"Analyzer"} href={"#analyzer"} />
+        <NavItem title={"Technologies"} href={"#how"} />
         <NavItem title={"Contact Us"} href={"#contact-us"} />
       </div>
       <div className="ml-auto">
-        <Button className="px-6 py-2" href="analyzer">
+        <Button className="px-6 py-2 font-bold uppercase" href="analyzer">
           Try it now
         </Button>
       </div>

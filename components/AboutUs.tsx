@@ -1,10 +1,11 @@
 import { FC } from "react";
 import { Fade } from "react-awesome-reveal";
+import Image from "next/image";
 
 const AboutUs: FC = () => {
   return (
     <>
-      <div className="h-screen pt-32" id="about-us">
+      <div className="pt-32" id="about-us">
         <h1 className="heading">About us</h1>
         <p className="mt-16 paragraph">
           Here at ÀI, we understand the struggles that many singles face. Some
@@ -14,11 +15,23 @@ const AboutUs: FC = () => {
           some research and soul searching, we realized that the underlying
           problem is that:
         </p>
+        {/* <div className="grid grid-cols-2 gap-16"> */}
         <Fade direction="up">
-          <p className="mt-8 font-bold text-center paragraph">
-            It is difficult to figure out if your interest is reciprocated.
-          </p>
+          <div className="flex flex-col items-center">
+            <p className="mt-12 mb-8 font-bold text-center paragraph">
+              It is difficult to figure out if your interest is reciprocated.
+            </p>
+            <Image
+              src="/images/texting.jpeg"
+              alt="Texting"
+              height={300}
+              width={450}
+              className="rounded-2xl"
+              layout="fixed"
+            />
+          </div>
         </Fade>
+
         <p className="mt-12 paragraph">
           From deciphering if they are flirty or just friendly to calculating
           their response times, it is often a guessing game in trying to figure
@@ -26,6 +39,8 @@ const AboutUs: FC = () => {
           lead to making the wrong decision such as confessing too early or not
           at all.
         </p>
+        {/* </div> */}
+
         <p className="mt-12 paragraph">
           Fret no more! Here at ÀI, we believe that we have found the solution
           to all your love life problems. Using state of the art technology of

@@ -63,6 +63,9 @@ const Analyzer: FC = () => {
             layout="fixed"
           />
         </li>
+        <li>
+          <h3 className="mb-4 text-left">Click the 'Export' button</h3>
+        </li>
       </ol>
     </div>
   );
