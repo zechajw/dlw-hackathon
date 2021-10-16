@@ -12,8 +12,13 @@
     "framer-motion": "^4.1.17",
     "next": "11.1.2",
     "react": "17.0.2",
+<<<<<<< HEAD
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1"
+=======
+    "react-awesome-reveal": "^3.8.1",
+    "react-dom": "17.0.2"
+>>>>>>> 7f01cc74989e48b6b1f5daff078c283e77b30fe0
   },
   "devDependencies": {
     "@types/react": "17.0.30",

@@ -15,7 +15,7 @@ const Loading: FC = () => {
           className="absolute top-0 left-0 w-screen h-screen bg-svg grid place-items-center"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.75, duration: 0.75 }}
         >
           <Image
             src="/icons/white-nobg.png"

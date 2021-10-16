@@ -6,6 +6,7 @@ import Border from "../components/Border";
 import AboutUs from "../components/AboutUs";
 import Navbar from "../components/Navbar";
 import ContactUs from "../components/ContactUs";
+import Analyzer from "../components/Analyzer";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
         <LandingPage />
         <Border>
           <AboutUs />
+          <Analyzer />
         </Border>
         <Border>
           <ContactUs />
