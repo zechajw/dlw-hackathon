@@ -1,4 +1,5 @@
-import { FC, useState, useEffect } from "react";
+import { FC } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const AboutUs: FC = () => {
   return (
@@ -13,9 +14,11 @@ const AboutUs: FC = () => {
           some research and soul searching, we realized that the underlying
           problem is that:
         </p>
-        <p className="mt-8 font-bold text-center paragraph">
-          It is difficult to figure out if your interest is reciprocated.
-        </p>
+        <Fade direction="up">
+          <p className="mt-8 font-bold text-center paragraph">
+            It is difficult to figure out if your interest is reciprocated.
+          </p>
+        </Fade>
         <p className="mt-12 paragraph">
           From deciphering if they are flirty or just friendly to calculating
           their response times, it is often a guessing game in trying to figure
@@ -28,10 +31,12 @@ const AboutUs: FC = () => {
           to all your love life problems. Using state of the art technology of
           sentiment analysis with machine learning, our solution can:{" "}
         </p>
-        <p className="mt-8 font-bold text-center paragraph">
-          Convert your chat history into visualizable data that tells you how
-          much they actually like you.
-        </p>
+        <Fade direction="up">
+          <p className="mt-8 font-bold text-center paragraph">
+            Convert your chat history into visualizable data that tells you how
+            much they actually like you.
+          </p>
+        </Fade>
       </div>
     </>
   );
