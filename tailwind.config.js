@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -7,19 +8,23 @@ module.exports = {
       fontFamily: {
         lato: "'Lato', 'sans-serif'",
       },
+      gradientColorStops: (theme) => ({
+        aidark: "#1f040f",
+        aipink: "#a31648",
+      }),
       colors: {
         ai: {
-          DEFAULT: "#E81F68",
-          50: "#FDEFF4",
-          100: "#FBD8E5",
-          200: "#F6AAC6",
-          300: "#F17CA6",
-          400: "#ED4D87",
-          500: "#E81F68",
-          600: "#C01452",
-          700: "#920F3F",
-          800: "#640A2B",
-          900: "#360517",
+          DEFAULT: "#A31648",
+          50: "#F4ABC5",
+          100: "#F194B5",
+          200: "#EB6796",
+          300: "#E43B77",
+          400: "#D01C5C",
+          500: "#A31648",
+          600: "#761034",
+          700: "#490A20",
+          800: "#1C040C",
+          900: "#000000",
         },
       },
     },
