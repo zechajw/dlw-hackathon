@@ -1,8 +1,9 @@
 import { FC } from "react";
+import Image from "next/image";
 
 const Analyzer: FC = () => {
   return (
-    <div className="flex flex-col items-center h-screen mt-28" id="analyzer">
+    <div className="flex flex-col items-center pt-32" id="analyzer">
       <h1 className="text-5xl font-bold text-center text-white">
         Ready to decipher your love life?
       </h1>
@@ -20,9 +21,9 @@ const Analyzer: FC = () => {
       <h2 className="mt-12 text-3xl font-bold text-white">
         How to export your Telegram chat history
       </h2>
-      <ol className="w-2/3 mt-8 text-xl text-left text-white list-decimal space-y-4">
+      <ol className="mt-8 text-xl text-center text-white list-decimal space-y-4">
         <li>
-          <h3>
+          <h3 className="text-left">
             Navigate to the personal chat that you would like to analyze on{" "}
             <a
               className="text-blue-400 underline cursor-pointer"
@@ -35,17 +36,32 @@ const Analyzer: FC = () => {
           </h3>
         </li>
         <li>
-          <h3>
-            Navigate to the personal chat that you would like to analyze on{" "}
-            <a
-              className="text-blue-400 underline cursor-pointer"
-              href="https://desktop.telegram.org/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Telegram Desktop
-            </a>
+          <h3 className="mb-4 text-left">
+            Click the triple dot button on the top right and then click 'Export
+            chat history'
           </h3>
+          <Image
+            src="/images/export-chat-history-1.png"
+            alt="Telegram export chat history"
+            height={300}
+            width={150}
+            className="rounded-2xl"
+            layout="fixed"
+          />
+        </li>
+        <li>
+          <h3 className="mb-4 text-left">
+            Uncheck all boxes, select format as 'JSON', and select a time period
+            ranging from 3 days to 7 days
+          </h3>
+          <Image
+            src="/images/export-chat-history-2.png"
+            alt="Telegram export chat history 2"
+            height={300}
+            width={240}
+            className="rounded-2xl"
+            layout="fixed"
+          />
         </li>
       </ol>
     </div>
