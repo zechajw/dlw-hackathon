@@ -5,10 +5,10 @@ const MyHead: FC = () => {
   return (
     <>
       <Head>
-        <title>ÁI - Demystify attraction with Artificial Intelligence</title>
+        <title>ÀI - Demystify attraction with Artificial Intelligence</title>
         <meta
           name="description"
-          content="ÁI - Demystify attraction with Artifical Intelligence"
+          content="ÀI - Demystify attraction with Artifical Intelligence"
         />
         <link rel="icon" href="/favicons/favicon.ico" />
         <link

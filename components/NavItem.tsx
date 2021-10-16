@@ -10,7 +10,7 @@ const NavItem: FC<Props> = ({ title, link }) => {
     <>
       <div>
         <a
-          className="flex flex-col items-center text-center cursor-pointer sm:w-20 hover:text-white"
+          className="text-md flex flex-col items-center text-center text-white cursor-pointer hover:text-gray-400"
           href={link}
         >
           {title}
