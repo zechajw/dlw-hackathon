@@ -41,7 +41,9 @@ const Navbar: FC = () => {
         <NavItem title={"Contact Us"} href={"#contact-us"} />
       </div>
       <div className="ml-auto">
-        <Button className="px-6 py-2">Try it now</Button>
+        <Button className="px-6 py-2" href="analyzer">
+          Try it now
+        </Button>
       </div>
     </div>
   );
