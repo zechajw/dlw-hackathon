@@ -40,17 +40,20 @@ const Graph: FC<Props> = ({ fullData }) => {
                 <StatisticCard
                   style="name1"
                   title="Messages sent"
-                  statistic="847"
+                  value={847}
+                  unit=""
                 />
                 <StatisticCard
                   style="name1"
                   title="Avg. response time"
-                  statistic={`${847}s`}
+                  value={1283}
+                  unit="s"
                 />
                 <StatisticCard
                   style="name1"
                   title="Avg. interest score"
-                  statistic={`${3.3}/5`}
+                  value={3.3}
+                  unit="/5"
                 />
               </div>
             </div>
@@ -62,17 +65,20 @@ const Graph: FC<Props> = ({ fullData }) => {
                 <StatisticCard
                   style="name2"
                   title="Messages sent"
-                  statistic={`437`}
+                  value={437}
+                  unit=""
                 />
                 <StatisticCard
                   style="name2"
                   title="Avg. response time"
-                  statistic={`${2803}s`}
+                  value={2803}
+                  unit="s"
                 />
                 <StatisticCard
                   style="name2"
                   title="Avg. interest score"
-                  statistic={`${2.4}/5`}
+                  value={2.4}
+                  unit="/5"
                 />
               </div>
             </div>

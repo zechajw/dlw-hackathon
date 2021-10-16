@@ -1,12 +1,14 @@
 import { FC } from "react";
+import CountUp from "react-countup";
 
 type Props = {
   style: "name1" | "name2";
-  title: string;
-  statistic: string;
+  title: "Messages sent" | "Avg. response time" | "Avg. interest score";
+  value: number;
+  unit: string;
 };
 
-const StatisticCard: FC<Props> = ({ style, title, statistic }) => {
+const StatisticCard: FC<Props> = ({ style, title, value, unit }) => {
   return (
     <>
       <div className="flex flex-col items-center p-4 bg-ai-800 bg-opacity-30 rounded-2xl">
@@ -18,7 +20,14 @@ const StatisticCard: FC<Props> = ({ style, title, statistic }) => {
             style === "name1" ? "text-[#EB6796]" : "text-[#F05B43]"
           } text-opacity-90`}
         >
-          {statistic}
+          <CountUp start={0} end={value} delay={0} duration={0.4}>
+            {({ countUpRef }) => (
+              <>
+                <span ref={countUpRef} />
+                {unit}
+              </>
+            )}
+          </CountUp>
         </p>
       </div>
     </>
