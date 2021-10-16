@@ -36,7 +36,7 @@ const Navbar: FC = () => {
         <NavItem title={"About Us"} href={"#about-us"} />
         <NavItem title={"Guide"} href="#guide" />
         <NavItem title={"Analyzer"} href={"#analyzer"} />
-        <NavItem title={"Technologies"} href={"#how"} />
+        <NavItem title={"Technologies"} href={"#technologies"} />
         <NavItem title={"Contact Us"} href={"#contact-us"} />
       </div>
       <div className="ml-auto">

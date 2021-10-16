@@ -2,12 +2,18 @@ import { FC, useState, useEffect } from "react";
 import Button from "./Button";
 import { Data, DataStore, FullData } from "../interfaces";
 import LoadingSpinner from "./LoadingSpinner";
+import { Fade } from "react-awesome-reveal";
 import Graph from "./Graph";
 
 const Analyzer: FC = () => {
   const [loading, setLoading] = useState(false);
   const [fullData, setFullData] = useState<FullData>();
   const [statistics, setStatistics] = useState<number[][]>([[]]);
+
+  const resetData = (): void => {
+    setFullData(undefined);
+    setStatistics([[]]);
+  };
 
   const fetchResults = async (): Promise<void> => {
     function sleep(ms: number): Promise<void> {
@@ -16,14 +22,14 @@ const Analyzer: FC = () => {
 
     setLoading(true);
     await sleep(500);
-    const dummyName1 = prompt("Please enter the first person's name");
-    const dummyName2 = prompt("Please enter the second person's name");
+    const dummyName1: any = prompt("Please enter the first person's name");
+    const dummyName2: any = prompt("Please enter the second person's name");
     await sleep(3000);
     try {
       const days: number = Math.floor(Math.random() * 5) + 3;
       const randomNumbers: number[] = [];
       for (let i = 0; i < days * 2; i++) {
-        randomNumbers.push(Number((Math.random() * 4 + 1).toFixed(2)));
+        randomNumbers.push(Number((Math.random() * 6).toFixed(2)));
       }
       const dummyData: Data[] = [];
       for (let i = days; i > 0; i--) {
@@ -90,18 +96,24 @@ const Analyzer: FC = () => {
               <h1 className="text-5xl font-bold text-center text-white">
                 You&apos;re all set to demystify attraction!
               </h1>
-              <Button
-                className="px-10 py-4 mx-auto mt-10 text-4xl font-bold text-center uppercase w-max"
-                onClick={fetchResults}
-              >
-                Upload Chat
-              </Button>
+              <Fade direction="up">
+                <Button
+                  className="px-10 py-4 mx-auto mt-10 text-4xl font-bold text-center uppercase w-max"
+                  onClick={fetchResults}
+                >
+                  Upload Chat
+                </Button>
+              </Fade>
             </div>
           </div>
         )}
         {loading && <LoadingSpinner />}
         {!loading && fullData && (
-          <Graph fullData={fullData} statistics={statistics} />
+          <Graph
+            fullData={fullData}
+            statistics={statistics}
+            resetData={resetData}
+          />
         )}
       </div>
     </>

@@ -1,21 +1,23 @@
-import { FC, useState, useRef, useEffect } from "react";
+import { FC } from "react";
 import { LineChart, Line, Legend, Tooltip, XAxis, YAxis } from "recharts";
 import { FullData } from "../interfaces";
 import StatisticCard from "./StatisticCard";
 import NameResults from "./NameResults";
+import Button from "./Button";
 
 type Props = {
   fullData: FullData;
   statistics: number[][];
+  resetData: () => void;
 };
 
-const Graph: FC<Props> = ({ fullData, statistics }) => {
+const Graph: FC<Props> = ({ fullData, statistics, resetData }) => {
   const { name1, name2 } = fullData;
 
   return (
     <>
       <div className="h-almost">
-        <h1 className="text-5xl font-bold text-white mb-14">Your results</h1>
+        <h1 className="heading mb-14">Your results</h1>
         <div className="grid grid-cols-12">
           <div className="col-span-8">
             <LineChart
@@ -85,10 +87,24 @@ const Graph: FC<Props> = ({ fullData, statistics }) => {
             </div>
           </div>
         </div>
-        <div className="px-6 py-4 mt-4 ml-8 bg-ai-800 bg-opacity-30 w-max rounded-xl">
-          <NameResults name={name1} nameNumber={1} score={statistics[0][2]} />
-          <div className="mt-6 text-3xl font-bold text-white">
-            <NameResults name={name2} nameNumber={2} score={statistics[1][2]} />
+        <div className="flex mt-4 ml-8">
+          <div className="px-6 py-4 bg-ai-800 bg-opacity-30 w-max rounded-xl">
+            <NameResults name={name1} nameNumber={1} score={statistics[0][2]} />
+            <div className="mt-6 text-3xl font-bold text-white">
+              <NameResults
+                name={name2}
+                nameNumber={2}
+                score={statistics[1][2]}
+              />
+            </div>
+          </div>
+          <div className="inline mt-auto ml-auto">
+            <Button
+              className="px-4 py-3 text-lg font-bold uppercase"
+              onClick={resetData}
+            >
+              upload another chat
+            </Button>
           </div>
         </div>
       </div>
