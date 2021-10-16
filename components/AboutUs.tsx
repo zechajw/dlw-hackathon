@@ -5,8 +5,8 @@ type Props = {};
 const AboutUs: FC<Props> = () => {
   return (
     <>
-      <div className="h-screen">
-        <h1 className="font-bold text-4xl">About us</h1>
+      <div id="about-us" className="h-screen">
+        <h1 className="text-4xl font-bold">About us</h1>
       </div>
     </>
   );
