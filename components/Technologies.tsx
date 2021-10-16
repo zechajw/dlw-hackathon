@@ -107,11 +107,31 @@ const Technologies: FC = () => {
         <br />
         <a
           className="text-blue-400 underline"
-          href="https://github.com/zechajw/dlw-hackathon"
+          href="https://github.com/amoscookeh/tensormodel"
           target="_blank"
           rel="noreferrer"
         >
           Pytorch ML Model and Data Analysis Repository
+        </a>
+        <br />
+        <br />
+        <a
+          className="text-blue-400 underline"
+          href="https://devpost.com/software/ai-demystify-attraction-with-artificial-intelligence"
+          target="_blank"
+          rel="noreferrer"
+        >
+          DevPost Submission
+        </a>
+        <br />
+        <br />
+        <a
+          className="text-blue-400 underline"
+          href="https://youtu.be/htLafHRA2lg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          YouTube Demo
         </a>
       </p>
     </div>
