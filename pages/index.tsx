@@ -7,6 +7,7 @@ import Border from "../components/Border";
 import AboutUs from "../components/AboutUs";
 import Navbar from "../components/Navbar";
 import ContactUs from "../components/ContactUs";
+import Guide from "../components/Guide";
 import Analyzer from "../components/Analyzer";
 
 const Home: NextPage = () => {
@@ -19,14 +20,14 @@ const Home: NextPage = () => {
           <LandingPage />
           <Border>
             <AboutUs />
+            <Guide />
             <Analyzer />
 
-
-          <ContactUs />
+            <ContactUs />
           </Border>
         </Body>
       </MobileHide>
-          </>
+    </>
   );
 };
 
