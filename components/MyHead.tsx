@@ -36,6 +36,19 @@ const MyHead: FC = () => {
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <meta
+          property="og:title"
+          content="ÀI - Demystify attraction with Artificial Intelligence"
+        />
+        <meta
+          property="og:site_name"
+          content="ÀI - Demystify attraction with Artificial Intelligence"
+        />
+        <meta
+          property="og:description"
+          content="ÀI - Demystify attraction with Artificial Intelligence"
+        />
+        <meta property="og:image" content="/icons/white-gradbg.png" />
       </Head>
     </>
   );

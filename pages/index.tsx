@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import MyHead from "../components/MyHead";
 import Loading from "../components/Loading";
 import MobileHide from "../components/MobileHide";
 import Body from "../components/Body";
@@ -14,6 +15,7 @@ import ContactUs from "../components/ContactUs";
 const Home: NextPage = () => {
   return (
     <>
+      <MyHead />
       <Loading />
       <MobileHide>
         <Body>
